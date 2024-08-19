@@ -1,0 +1,73 @@
+id: pull_request
+learningObjectives:
+  - Open a pull request to make a change to the codebase.
+hints:
+  - Make sure you change the frontend/src/custom.scss file.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "We will make a small change to the style, let's change the font color of sign in and sign up buttons."
+          - text:  "So, :instruction[open the `frontend/src/custom.scss` file and add the following line at the end of the file:]"
+          - text: |-
+                   ```css
+                   .navbar-nav .nav-item .nav-link {
+                      color: #FFFFFF;
+                   } 
+                   ```
+          - text: Once you're done, open a pull request , with a meaningful description of your change.
+          - text: I'll be here to review it.
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: ${eventType}
+      cases:
+        github_pr_opened:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Checking now
+            - actionId: github_pr_comment
+              params:
+                person: lucca
+                message: Checking now.
+        github_pr_workflow_complete_success:
+          if:
+            conditions:
+              - conditionId: github_does_file_contain
+                params:
+                  fileName: frontend/src/custom.scss
+                  regex: "color: #ffffff"
+                  flags: "i"
+            then:
+              do:
+                - actionId: bot_message
+                  params:
+                    person: lucca
+                    messages:
+                      - text: Looking good! You can merge the PR now.
+                - actionId: github_pr_approve
+                  params:
+                    person: lucca
+                    message: Looking good! You can merge the PR now.
+            else:
+              do:
+                - actionId: bot_message
+                  params:
+                    person: lucca
+                    messages:
+                      - text: Looks like you did not update the `frontend/src/custom.scss` file. Remember to add the
+                          relevant content.
+                - actionId: github_pr_reject
+                  params:
+                    person: lucca
+                    message: Looks like you did not update the `frontend/src/custom.scss` file. Remember to add the
+                      relevant content.
+        github_pr_merged:
+          do:
+            - actionId: finish_step

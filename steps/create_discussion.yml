@@ -1,0 +1,29 @@
+id: create_discussion
+learningObjectives:
+  - Create a discussion in GitHub
+hints:
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Now that we've created an issue, let's ask for suggestions on the new color for the links."
+          - text: "Luckily, GitHub has a feature called Discussions that allows us to have conversations around topics."
+          - text: ":instruction[Go to the [Discussions tab](${user.repository}/discussions) in the GitHub repository and click on the 'New discussion' button.]"
+          - text: "Navigate to the General category and ask for input on the new font color for the sign-up and sign-in buttons."
+trigger:
+  type: github_discussion_created
+  flowNode:
+    do:
+      - actionId: github_reply_to_discussion
+        params:
+          discussionNumber: "${githubDiscussionNumber}"
+          body: "Hi, the font color of the sign in and sign up buttons should be #FFFFFF."
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: That's great, I see you opened the discussion.
+            - text: I talked with our designer, I replied to your discussion with the new font color.
+      - actionId: finish_step

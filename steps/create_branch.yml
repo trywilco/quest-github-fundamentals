@@ -1,0 +1,24 @@
+id: create_branch
+learningObjectives:
+  - Create a branch in GitHub.
+hints:
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: So now that we have the color in hand, let's first create a branch for the code change.
+          - text: "Go to the [GitHub repository](${user.repository}), click on branch dropdown (Should be on `main`) and give the new branch with a meaningful name."
+          - text: I'll wait here for you to finish.
+
+trigger:
+  type: github_branch_created
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Awesome! You've created the branch. Let's move on to the next step.
+      - actionId: finish_step

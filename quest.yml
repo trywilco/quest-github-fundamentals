@@ -1,0 +1,24 @@
+id: github_fundamentals
+title: GitHub Fundamentals
+subtitle: Learn the basics of GitHub and version control
+description: In this quest, you will learn the basics of GitHub and version control. You will set up a repository and learn how to use Git to manage your codebase.
+  You will also learn how to collaborate with others on GitHub, create branches, and submit pull requests.
+summary: In this quest, you will learn the basics of GitHub and version control. You will set up a repository and learn how to use Git to manage your codebase.
+  You will also learn how to collaborate with others on GitHub, create branches, and submit pull requests.
+level: beginner
+duration: 3
+repository: https://github.com/trywilco/Anythink-Market-Public
+steps:
+  - intro_to_github
+  - create_issue
+  - create_discussion
+  - create_branch
+  - pull_request
+skills:
+  - git
+  - github
+messages:
+  questFinished:
+    person: lucca
+    messages:
+      - text: "Congratulations! You have completed the GitHub Fundamentals quest. You are now ready to use GitHub to manage your codebase and collaborate with others."

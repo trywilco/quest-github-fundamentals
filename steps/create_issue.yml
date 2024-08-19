@@ -1,0 +1,26 @@
+id: create_issue
+learningObjectives:
+  - Create an issue in GitHub.
+hints:
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "So, we have a minor accessibility issue on our Anythink website."
+          - text: "The sign-up and sign-in buttons are not very visible due to their grey color."
+          - text: "Before we dive into coding, let's ensure we can track this issue, communicate it clearly, and collaborate with other developers for their feedback."
+          - text: "Let's start by creating an issue in GitHub to track this problem."
+          - text: ":instruction[Go to the [Issues tab](${user.repository}/issues) in the GitHub repository and click on the 'New issue' button.]"
+          - text: "Fill in the issue title and description with the relevant information, and then submit the issue."
+trigger:
+  type: github_issue_created
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Thanks for creating the issue, now everyone can see it, and give feedback or help to solve it.
+      - actionId: finish_step

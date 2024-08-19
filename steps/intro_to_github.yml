@@ -1,0 +1,33 @@
+id: intro_to_github
+learningObjectives:
+  - Understand the basics of GitHub
+hints:
+startFlow:
+  do:
+    - actionId: github_repo_api
+      params:
+        method: patch
+        path: /
+        body:
+          has_discussions: true
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Hi there! I'm Lucca, your GitHub guide.
+          - text: In this quest, we'll learn about the basics of GitHub.
+          - text: GitHub is a platform that allows you to host and review code, manage projects, and build software.
+          - text: Are you ready to get started?
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Great! Let's get started.
+      - actionId: finish_step
