@@ -17,7 +17,9 @@ startFlow:
           - text: Hi there! I'm Lucca, your GitHub guide.
           - text: In this quest, we'll learn about the basics of GitHub.
           - text: GitHub is a platform that allows you to host and review code, manage projects, and build software.
-          - text: Are you ready to get started?
+          - text: You can create repositories to store your code, collaborate with others, and track changes.
+          - text: To create a repository, you can click on the '+' icon in the top right corner of your GitHub profile.
+          - text: Luckily we already created one for you, are you ready to get started?
     - actionId: ready_message
       params:
         person: lucca
