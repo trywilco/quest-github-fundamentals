@@ -17,7 +17,8 @@ startFlow:
                       color: #FFFFFF;
                    } 
                    ```
-          - text: Once you're done, open a pull request , with a meaningful description of your change.
+          - text: Once you're done, open a pull request.
+          - text: On the pull request description, add a brief explanation of the change you made, and add a link to the GitHub issue that this PR is related to.
           - text: I'll be here to review it.
 trigger:
   type: github_pr_lifecycle_status

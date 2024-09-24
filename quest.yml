@@ -13,6 +13,8 @@ steps:
   - create_issue
   - create_discussion
   - create_branch
+  - codespace_start
+  - change_codespace_branch
   - pull_request
 skills:
   - git

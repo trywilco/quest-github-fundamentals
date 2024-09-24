@@ -1,0 +1,29 @@
+id: change_codespace_branch
+learningObjectives:
+  - Learn how to switch branches in a Codespace.
+hints:
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Before we make any changes, let's ensure we can work on our new branch in Codespaces."
+          - text: "First, we need to fetch the latest changes from the remote repository."
+          - text: "To do this, click on the `Source Control` icon, then click the `refresh` button."
+          - text: "Next, let's switch to our new branch. To do this, click on the `Source Control` icon, then click the `...` button, select `Checkout to...`, and choose your branch name."
+          - text: "Once you've switched to your branch, let me know so we can continue."
+          - actionId: ready_message
+            params:
+              person: lucca
+
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: "Great! You are now on your new branch."
+      - actionId: finish_step
