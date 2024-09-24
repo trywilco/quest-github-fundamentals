@@ -13,9 +13,9 @@ startFlow:
           - text: "To do this, click on the `Source Control` icon, then click the `refresh` button."
           - text: "Next, let's switch to our new branch. To do this, click on the `Source Control` icon, then click the `...` button, select `Checkout to...`, and choose your branch name."
           - text: "Once you've switched to your branch, let me know so we can continue."
-          - actionId: ready_message
-            params:
-              person: lucca
+    - actionId: ready_message
+      params:
+        person: lucca
 
 trigger:
   type: user_ready_response
