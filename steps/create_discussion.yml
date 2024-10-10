@@ -11,7 +11,12 @@ startFlow:
           - text: "Now that we've created an issue, let's ask for suggestions on the new color for the links."
           - text: "Luckily, GitHub has a feature called Discussions that allows us to have conversations around topics."
           - text: ":instruction[Go to the [Discussions tab](${user.repository}/discussions) in the GitHub repository and click on the 'New discussion' button.]"
-          - text: "Navigate to the General category and ask for input on the new font color for the sign-up and sign-in buttons."
+          - text: "![](${new-discussion.png})"
+          - text: "Navigate to the General category. "
+          - text: "![](${general-discussion.png})"
+          - text: "In the title field, type 'New color for the links' and in the body, ask for suggestions on the new font color for the sign-in and sign-up buttons."
+          - text: "Once you've finished, :instruction[Click on the 'Start discussion' button.]"
+          - text: "![](${start-new-discussion.png})"
 trigger:
   type: github_discussion_created
   flowNode:

@@ -17,8 +17,10 @@ startFlow:
                       color: #FFFFFF;
                    } 
                    ```
-          - text: Once you're done, open a pull request.
-          - text: On the pull request description, add a brief explanation of the change you made, and add a link to the GitHub issue that this PR is related to.
+          - text: Once you're done, :instruction[Commit & Create a pull request] from the source control menu.
+          - text: "![](${commit-and-create-pr.png})"
+          - text: Add a description to the pull request, with a brief explanation of the change you made, and add a link to the GitHub issue that this PR is related to and hit `Create`.
+          - text: "![](${create-pr.png})"
           - text: I'll be here to review it.
 trigger:
   type: github_pr_lifecycle_status

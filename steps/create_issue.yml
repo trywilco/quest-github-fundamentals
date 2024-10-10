@@ -13,6 +13,7 @@ startFlow:
           - text: "Before we dive into coding, let's ensure we can track this issue, communicate it clearly, and collaborate with other developers for their feedback."
           - text: "Let's start by creating an issue in GitHub to track this problem."
           - text: ":instruction[Go to the [Issues tab](${user.repository}/issues) in the GitHub repository and click on the 'New issue' button.]"
+          - text: "![](${issues.png})"
           - text: "Fill in the issue title and description with the relevant information, and then submit the issue."
 trigger:
   type: github_issue_created
