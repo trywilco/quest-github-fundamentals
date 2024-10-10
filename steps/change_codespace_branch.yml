@@ -10,8 +10,10 @@ startFlow:
         messages:
           - text: "Before we make any changes, let's ensure we can work on our new branch in Codespaces."
           - text: "First, we need to fetch the latest changes from the remote repository."
-          - text: "To do this, click on the `Source Control` icon, then choose `Pull, Push > Fetch`."
-          - text: "Next, let's switch to our new branch. To do this, click on the `Source Control` icon, then click the `...` button, select `Checkout to...`, and choose your branch name."
+          - text: "To do this, click on the `Synchronize` icon on the bottom left."
+          - text: "![](${github-sync.png})"
+          - text: "Next, let's switch to our new branch. To do this, click on the branch icon named `main`, select your branch name and hit enter."
+          - text: "![](${github-choose-branch.png})"
           - text: "Once you've switched to your branch, let me know so we can continue."
     - actionId: ready_message
       params:

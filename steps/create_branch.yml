@@ -10,7 +10,8 @@ startFlow:
         messages:
           - text: So now that we have the color in hand, let's first create a branch for the code change.
           - text: "Go to the [GitHub repository](${user.repository}), make sure the branch dropdown is set on `main`."
-          - text: "Click on the dropdown and type a branch name with a meaningful name and hit `create branch <your-branch-name> from main`."
+          - text: "Click on the dropdown and type a branch name with a meaningful name and :instruction[Click create branch <your-branch-name> from main.]"
+          - text: "![](${new-branch.png})"
           - text: I'll wait here for you to finish.
 
 trigger:
