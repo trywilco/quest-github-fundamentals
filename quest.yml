@@ -6,7 +6,7 @@ description: In this quest, you will learn the basics of GitHub and version cont
 summary: In this quest, you will learn the basics of GitHub and version control. You will set up a repository and learn how to use Git to manage your codebase.
   You will also learn how to collaborate with others on GitHub, create branches, and submit pull requests.
 level: beginner
-duration: 3
+duration: 0.5
 repository: https://github.com/trywilco/Anythink-Market-Public
 steps:
   - intro_to_github
