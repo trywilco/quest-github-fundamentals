@@ -24,3 +24,8 @@ messages:
     person: lucca
     messages:
       - text: "Congratulations! You have completed the GitHub Fundamentals quest. You are now ready to use GitHub to manage your codebase and collaborate with others."
+sidebarTools:
+  - name: GitHub Universe FAQ
+    link: https://trywilco.notion.site/GitHub-Universe-FAQ-11ac0eacc16280cca15de0b1518fa087
+    icon: faq-icon.svg
+
