@@ -49,15 +49,17 @@ trigger:
                   flags: "i"
             then:
               do:
-                - actionId: bot_message
-                  params:
-                    person: lucca
-                    messages:
-                      - text: Looking good! You can merge the PR now.
                 - actionId: github_pr_approve
                   params:
                     person: lucca
                     message: Looking good! You can merge the PR now.
+                - actionId: bot_message
+                  params:
+                    person: lucca
+                    messages:
+                      - text: "You've just completed the GitHub Fundamentals quest—great job! Now you understand how to create issues, start discussions, work with branches, and open pull requests."
+                      - text: "Next, to collaborate more effectively, it's important to communicate clearly in GitHub. One key way to do that? Mastering Markdown—the formatting language used in issues, pull requests, and README files."
+                      - text: "👉 Check out the \"Communicate using Markdown\" module on [Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/) to level up your writing and make your contributions clearer and more professional."
             else:
               do:
                 - actionId: bot_message
