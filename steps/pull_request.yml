@@ -59,7 +59,7 @@ trigger:
                     messages:
                       - text: "You've just completed the GitHub Fundamentals quest—great job! Now you understand how to create issues, start discussions, work with branches, and open pull requests."
                       - text: "Next, to collaborate more effectively, it's important to communicate clearly in GitHub. One key way to do that? Mastering Markdown—the formatting language used in issues, pull requests, and README files."
-                      - text: "👉 Check out the \"Communicate using Markdown\" module on [Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/?wt.mc_id=githubfundamentals_wilcogithubfundamentals_webpage_cnl) to level up your writing and make your contributions clearer and more professional."
+                      - text: "👉 Check out the \"Communicate using Markdown\" module on [Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/?wt.mc_id=gitcommit_wilcogitcommit_webpage_cnl) to level up your writing and make your contributions clearer and more professional."
             else:
               do:
                 - actionId: bot_message
